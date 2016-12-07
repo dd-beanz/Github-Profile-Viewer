@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import RepoList from './RepoList.jsx';
 
 class Profile extends Component {
   render() {
@@ -12,7 +13,8 @@ class Profile extends Component {
             <span className="card-title">{this.props.userData.login}</span>
           </div>
           <div className="card-content">
-            <p></p>
+            <h5 className='light center'>User Repositories</h5>
+            <RepoList userRepos={this.props.userRepos} />
           </div>
         </div>
       </div>
